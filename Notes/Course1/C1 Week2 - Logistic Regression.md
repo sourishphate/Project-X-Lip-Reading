@@ -49,7 +49,7 @@ have nx number of rows.
 - The cost function in logistic regression is used to determine how much error is present or how close our output is to the predicted output.
 
 - While training the model we will try to find parameters weight and bias such that the cost function is minimum.
-
+![cost funtion](C:\Users\Sourish\Project-X-Lip-Reading\Notes\Course1\loss.png)
 
 ## Gradient Descent:
 Gradient Descent is an algorithm used to minimize a function by finding the direction of the steepest descent. In the context of neural networks, this function is usually the loss function, which measures how well the model's predictions match the actual data. 
