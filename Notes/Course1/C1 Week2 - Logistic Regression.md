@@ -34,7 +34,7 @@ have nx number of rows.
 - The input information is multiplied by some numbers called parameters and added to a bias term
 - These parameters and bias term are adjusted during the learning process to make our predictions as accurate as possible.
 - Unlike linear regression, which predicts a continuous output, logistic regression predicts probabilities of the outcome that are bounded between 0 and 1. This is achieved using the logistic function (also known as the sigmoid function).
-![sigmoid funtion](Notes/Course1/sigmoid.png)
+
 
 #### Parameters of Logistic Regression
 - Weights (Coefficients): The weights or coefficients w1,w2,...,wnw_1, w_2, ..., w_nw1​,w2​,...,wn​ determine the influence of each feature on the prediction. These are learned from the data during the training process.
@@ -49,7 +49,7 @@ have nx number of rows.
 - The cost function in logistic regression is used to determine how much error is present or how close our output is to the predicted output.
 
 - While training the model we will try to find parameters weight and bias such that the cost function is minimum.
-![cost funtion](C:\Users\Sourish\Project-X-Lip-Reading\Notes\Course1\loss.png)
+
 
 ## Gradient Descent:
 Gradient Descent is an algorithm used to minimize a function by finding the direction of the steepest descent. In the context of neural networks, this function is usually the loss function, which measures how well the model's predictions match the actual data. 
