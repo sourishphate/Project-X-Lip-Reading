@@ -34,6 +34,7 @@ have nx number of rows.
 - The input information is multiplied by some numbers called parameters and added to a bias term
 - These parameters and bias term are adjusted during the learning process to make our predictions as accurate as possible.
 - Unlike linear regression, which predicts a continuous output, logistic regression predicts probabilities of the outcome that are bounded between 0 and 1. This is achieved using the logistic function (also known as the sigmoid function).
+  
 ![sigmoid](https://github.com/user-attachments/assets/f251c026-cc53-42a7-bdfa-a806aefe6d2a)
 
 #### Parameters of Logistic Regression
