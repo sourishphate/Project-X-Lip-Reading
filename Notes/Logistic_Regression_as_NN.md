@@ -16,7 +16,7 @@ _Recurrent Neural Network_: Speech Recognition, Machine translation
     2. Ability to train large neural networks.
     3. Algorithmic innovations
 
-### Binary Classification
+## Binary Classification
 
 - We represent the image as a feature vector
 - We then use logistic regression to learn a classifier that can take this feature vector as input
@@ -25,7 +25,7 @@ _Recurrent Neural Network_: Speech Recognition, Machine translation
 _We'll use lowercase m to represent the number of training examples, and lowercase n to represent the dimension of the input feature vector.
 ` X.shape = (nx, m)` `Y.shape = (1,m)`_
 
-### Logistic Regression
+## Logistic Regression
 
 ![Logistic regression](https://github.com/user-attachments/assets/f2438f7f-db07-43c7-b008-405e082e0087)
 
@@ -50,7 +50,7 @@ _Here, y represents the true label (whether someone bought the product or not), 
 - The cost function we use in logistic regression is called the negative log likelihood loss function
 - It is defined as `-y*log(y_hat) - (1-y)*log(1-y_hat)`, where y is the true label and y_hat is the predicted probability.
 
-### Gradient descent
+## Gradient descent
 
 ![Gradient descent](https://github.com/user-attachments/assets/3085afa6-623d-4be6-b47d-80be0fbbd4ea)
 
