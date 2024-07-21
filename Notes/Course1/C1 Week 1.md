@@ -3,7 +3,7 @@
 
 -They are composed of layers of interconnected nodes, or neurons, each performing simple computations to solve complex tasks.
 
-## Basic Structure:
+## Basic Structure-
 -Input Layer: The first layer that receives the input data.
 -Hidden Layers: Layers between the input and output layers where computations are performed. There can be multiple hidden layers.
 -Output Layer: The final layer that produces the output.
