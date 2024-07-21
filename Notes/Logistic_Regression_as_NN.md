@@ -16,7 +16,7 @@ _Recurrent Neural Network_: Speech Recognition, Machine translation
     2. Ability to train large neural networks.
     3. Algorithmic innovations
 
-## Binary Classification
+### Binary Classification
 
 - We represent the image as a feature vector
 - We then use logistic regression to learn a classifier that can take this feature vector as input
@@ -34,7 +34,7 @@ _We'll use lowercase m to represent the number of training examples, and lowerca
 - Logistic regression helps us estimate the chance of an event happening based on certain input features.
 - It uses a special function called the sigmoid function to convert the input into a probability value between zero and one
 
-#### Lost function
+### Lost function
 
 - To measure how well your model is doing, you need a loss function.
 - The cost function tells you how close your predictions are to the actual labels in your training data.
@@ -50,28 +50,28 @@ _Here, y represents the true label (whether someone bought the product or not), 
 - The cost function we use in logistic regression is called the negative log likelihood loss function
 - It is defined as `-y*log(y_hat) - (1-y)*log(1-y_hat)`, where y is the true label and y_hat is the predicted probability.
 
-## Gradient descent
+### Gradient descent
 
 ![Gradient descent](https://github.com/user-attachments/assets/3085afa6-623d-4be6-b47d-80be0fbbd4ea)
 
 - We need to find w, b that minimize cost function.
 - Derivatives help us improve our neural networks. They allow us to adjust the parameters of the network, like the weights and biases
 
-#### Computation graph
+### Computation graph
 
 ![Computation Graph](https://github.com/user-attachments/assets/c1d5556a-0b40-430c-9b15-c99076a66dc2)
 
 - It is a flowchart that shows the steps needed to compute a function.
 - Each step in the graph represents a calculation or operation.
 
-#### Computing derivatives
+### Computing derivatives
 
 ![Computing derivative](https://github.com/user-attachments/assets/e42ef555-309d-4dc7-9182-208b858d8e3c)
 
 - To calculate derivatives, we want to know how a small change in one variable affects the value of another variable.
 - We can also use the chain rule in calculus to calculate derivatives.
 
-#### Logistic regression derivatives
+### Logistic regression derivatives
 
 ![Logistic regression derivatives](https://github.com/user-attachments/assets/f8cb4022-8edf-42dd-afeb-e780d33c19e2)
 
@@ -81,7 +81,7 @@ _Here, y represents the true label (whether someone bought the product or not), 
 - These derivatives tell us how much we need to change the parameters to reduce the loss.
 - By using gradient descent, we can train the logistic regression model to make accurate predictions on new data
 
-#### Logistic regression on m examples
+### Logistic regression on m examples
 
 ![logistic regression on m example](https://github.com/user-attachments/assets/f6a7cd4f-f1f0-4d3c-b8a9-b49a595d1c80)
 
