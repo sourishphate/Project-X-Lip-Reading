@@ -1,15 +1,15 @@
 # Neural Networks-
--Neural networks are a class of machine learning models inspired by the human brain. They consist of interconnected layers of nodes (neurons) that process data and learn to recognize patterns.
+- Neural networks are a class of machine learning models inspired by the human brain. They consist of interconnected layers of nodes (neurons) that process data and learn to recognize patterns.
 
--They are composed of layers of interconnected nodes, or neurons, each performing simple computations to solve complex tasks.
+- They are composed of layers of interconnected nodes, or neurons, each performing simple computations to solve complex tasks.
 
 ## Basic Structure-
--Input Layer: The first layer that receives the input data.
--Hidden Layers: Layers between the input and output layers where computations are performed. There can be multiple hidden layers.
--Output Layer: The final layer that produces the output.
+- Input Layer: The first layer that receives the input data.
+- Hidden Layers: Layers between the input and output layers where computations are performed. There can be multiple hidden layers.
+- Output Layer: The final layer that produces the output.
 
 ## Supervised Learning-
--Structured data: It is data that has context and meaning and is represented in a proper structured format to find the output.
+- Structured data: It is data that has context and meaning and is represented in a proper structured format to find the output.
 
 For example in the house price prediction we use different parameters such as locality ,transport, area etc as structured data to find the output that is the price of the house.
 -Unstructured Data:This data is not structured like above and has to be analysed to find the context.For example a raw audio file or a picture.
