@@ -7,7 +7,10 @@
 - Each instance in the dataset is assigned to one of these two classes based on a prediction model.
 - The two possible outcomes are often labeled as 0 and 1, True and False, or positive and negative.
 
+![binary class](https://github.com/user-attachments/assets/d55c75cc-02b3-4aa3-9121-555007c3b871)
+
 ### Notation for training examples:
+
 Examples are represented by (x,y)
 
 Where x is the input feature vector of size nx 
@@ -36,6 +39,9 @@ have nx number of rows.
 - Unlike linear regression, which predicts a continuous output, logistic regression predicts probabilities of the outcome that are bounded between 0 and 1. This is achieved using the logistic function (also known as the sigmoid function).
 
 
+![sigmoid](https://github.com/user-attachments/assets/c226bc93-c677-4e24-a862-3a9633a5b13b)
+
+
 #### Parameters of Logistic Regression
 - Weights (Coefficients): The weights or coefficients w1,w2,...,wnw_1, w_2, ..., w_nw1​,w2​,...,wn​ determine the influence of each feature on the prediction. These are learned from the data during the training process.
 - Bias (Intercept): The bias term bbb is a constant that allows the decision boundary to be adjusted without depending on the input features.
@@ -45,11 +51,12 @@ have nx number of rows.
 - The loss function we will use in logistic regression is called the negative log likelihood loss function.
 - It is represented as `-y*log(y_hat) - (1-y)*log(1-y_hat)`, where y is the actual value of our model and y_hat is the predicted probability.
 
+![loss](https://github.com/user-attachments/assets/57c96093-9a99-425e-9279-b5982ac5748d)
+
 #### Logistic Regression Cost Function:
 - The cost function in logistic regression is used to determine how much error is present or how close our output is to the predicted output.
 
 - While training the model we will try to find parameters weight and bias such that the cost function is minimum.
-
 
 ## Gradient Descent:
 Gradient Descent is an algorithm used to minimize a function by finding the direction of the steepest descent. In the context of neural networks, this function is usually the loss function, which measures how well the model's predictions match the actual data. 
