@@ -1,23 +1,23 @@
 ### 1. One Layered Convolutional network
 
-1. **Convolution:**
+- **Convolution:**
 
-- CNNs use a process called convolution, where they apply filters to an input image.
-- These filters help to extract important features from the image, such as edges or textures.
+    - CNNs use a process called convolution, where they apply filters to an input image.
+    - These filters help to extract important features from the image, such as edges or textures.
 
-2. **Non-linearity:**
+- **Non-linearity:**
 
-- After the convolution step, a non-linear function is applied to the filtered image.
-- This helps to introduce non-linear relationships between the features, allowing the network to learn more complex patterns.
+    - After the convolution step, a non-linear function is applied to the filtered image.
+    - This helps to introduce non-linear relationships between the features, allowing the network to learn more complex patterns.
 
-3. **Pooling:**
+- **Pooling:**
 
-- CNNs also use a technique called pooling, where they reduce the size of the image by selecting the most important features.
-- This helps to make the network more efficient and reduces the risk of overfitting.
+    - CNNs also use a technique called pooling, where they reduce the size of the image by selecting the most important features.
+    - This helps to make the network more efficient and reduces the risk of overfitting.
 
-4. **Fully Connected Layers:**
+- **Fully Connected Layers:**
 
-- Finally, the features extracted from the previous steps are passed through fully connected layers, which perform classification or regression tasks based on the extracted features.
+    - Finally, the features extracted from the previous steps are passed through fully connected layers, which perform classification or regression tasks based on the extracted features.
 
 ![one layered convo](https://github.com/user-attachments/assets/3d40390b-2515-4a9e-93ec-2e6875ea2b37)
 
@@ -47,20 +47,20 @@
 
 #### 2.2 Pooling Layer
 
-1. Max pooling
+- Max pooling
 
-- In max pooling, the maximum value within each region is selected as the representative value.
-- It focuses on capturing the most prominent or significant feature within the region.
-- Max pooling helps in preserving the strongest features detected in the input data.
+    - In max pooling, the maximum value within each region is selected as the representative value.
+    - It focuses on capturing the most prominent or significant feature within the region.
+    - Max pooling helps in preserving the strongest features detected in the input data.
 
 ![Max pooling ](https://github.com/user-attachments/assets/24cfbe09-495e-43f3-b8ee-0480f3f88360)
 
-2. Average Pooling
+- Average Pooling
 
-- In average pooling, the average value of all the numbers within each region is selected as the representative value.
-- It takes into account the overall intensity or magnitude of the features within the region.
-- Average pooling helps in reducing the impact of outliers or extreme values in the input data.
-- It is sometimes used in very deep neural networks to collapse the representation of a large volume into a smaller one.
+    - In average pooling, the average value of all the numbers within each region is selected as the representative value.
+    - It takes into account the overall intensity or magnitude of the features within the region.
+    - Average pooling helps in reducing the impact of outliers or extreme values in the input data.
+    - It is sometimes used in very deep neural networks to collapse the representation of a large volume into a smaller one.
 
 \*Hyperparameters: `filter size` `stride`
 
@@ -97,11 +97,11 @@
 
 #### 3.1 Why convolution?
 
-1. **Parameter sharing:**
+- **Parameter sharing:**
 
 Same set of parameters can be used in different parts of an image to detect certain features.
 
-2. **Sparsity of connections:**
+- **Sparsity of connections:**
 
 Each output in a CNN only depends on a small number of inputs. This allows the network to focus on important features and ignore irrelevant ones.
 

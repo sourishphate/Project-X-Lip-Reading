@@ -31,8 +31,8 @@
 
 #### 2.1 Problem 
 
-1. When we apply a convolutional operator, the image size shrinks. This can be a problem if we have many layers in our neural network because the image can become very small. 
-2. We convolve an image with a filter, the pixels at the corners and edges of the image are used less in the output. This means we're throwing away important information from the edges of the image.
+- When we apply a convolutional operator, the image size shrinks. This can be a problem if we have many layers in our neural network because the image can become very small. 
+- We convolve an image with a filter, the pixels at the corners and edges of the image are used less in the output. This means we're throwing away important information from the edges of the image.
 
 *To solve these problems, we can pad the image.*
 
@@ -50,30 +50,30 @@ There are two common choices for padding: `valid convolution` and `same convolut
 
 Normally, you would slide the filter over the image one step at a time and perform calculations. But with stride convolutions, instead of moving the filter one step at a time, you move it two steps at a time.
 
-1. **Dimensionality reduction:**
+- **Dimensionality reduction:**
 
-- Stride convolutions can reduce the spatial dimensions of the input feature maps.
-- By moving the filter with larger strides, the output feature map size is reduced, which can help in reducing the computational complexity of the network.
+    - Stride convolutions can reduce the spatial dimensions of the input feature maps.
+    - By moving the filter with larger strides, the output feature map size is reduced, which can help in reducing the computational complexity of the network.
 
-2. **Faster computational:**
+- **Faster computational:**
 
-- With larger strides, fewer computations are required compared to traditional convolutions. 
-- This can lead to faster training and inference times, especially when dealing with large datasets or complex models.
+    - With larger strides, fewer computations are required compared to traditional convolutions. 
+    - This can lead to faster training and inference times, especially when dealing with large datasets or complex models.
 
-3. **Increased receptive field:**
+- **Increased receptive field:**
 
-- Stride convolutions allow the network to capture information from a larger area of the input image.
-- By skipping some positions during the convolution operation can be beneficial for tasks that require capturing global context or detecting larger patterns.
+    - Stride convolutions allow the network to capture information from a larger area of the input image.
+    - By skipping some positions during the convolution operation can be beneficial for tasks that require capturing global context or detecting larger patterns.
 
-4. **Feature extraction at different scales:**
+- **Feature extraction at different scales:**
 
-- By using different stride values in different layers of the network, it is possible to extract features at multiple scales.
-- This can be useful for tasks such as object detection, where objects of different sizes need to be detected.
+    - By using different stride values in different layers of the network, it is possible to extract features at multiple scales.
+    - This can be useful for tasks such as object detection, where objects of different sizes need to be detected.
 
-5. **Regularization:**
+- **Regularization:**
 
-- Stride convolutions can act as a form of regularization by reducing the spatial resolution of the feature maps.
-- This can help prevent overfitting and improve the generalization ability of the network.
+    - Stride convolutions can act as a form of regularization by reducing the spatial resolution of the feature maps.
+    - This can help prevent overfitting and improve the generalization ability of the network.
 
 ![strided convolution](https://github.com/user-attachments/assets/d50103ec-a08b-4c50-9ef3-fc1a11108504)
 
