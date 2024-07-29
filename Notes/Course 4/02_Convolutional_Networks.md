@@ -72,7 +72,7 @@
 
     - We start with an image that is 32 x 32 pixels and has 3 color channels (RGB).
 
-    - **Convolutional Layer:**
+- **Convolutional Layer:**
 
     - We apply a filter of size `5 x 5` to the input image. This filter helps us extract features from the image.
     - We use 6 filters in this layer, so the output becomes `28 x 28 x 6`
