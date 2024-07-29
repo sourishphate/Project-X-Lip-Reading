@@ -1,4 +1,4 @@
-### One Layered Convolutional network
+### 1. One Layered Convolutional network
 
 1. **Convolution:**
 
@@ -21,7 +21,7 @@
 
 ![one layered convo](https://github.com/user-attachments/assets/3d40390b-2515-4a9e-93ec-2e6875ea2b37)
 
-#### Notation
+#### 1.1 Notation
 
 - `f[l] = filter size`
 - `p[l] = padding`
@@ -35,17 +35,17 @@
 - `Input = nh[l-1] * nw[l-1] * nc[l-1]`
 - `Output = nh[l] * nw[l] * nc[l]`
 
-### Simple Convolution Network Example (ConvNet)
+### 2. Simple Convolution Network Example (ConvNet)
 
 ![convnet](https://github.com/user-attachments/assets/4b86c227-88b8-4cdf-a74a-54fd65d879a8)
 
-#### Types of Layer
+#### 2.1 Types of Layer
 
 - Convolution (CONV)
 - Pooling (POOL)
 - Fully Connected (FC)
 
-#### Pooling Layer
+#### 2.2 Pooling Layer
 
 1. Max pooling
 
@@ -66,7 +66,7 @@
 
 ![average pooling](https://github.com/user-attachments/assets/08ff01f3-fc72-463f-931e-24628691fb28)
 
-### Convolutional Neural Network Example (LeNet-5)
+### 3. Convolutional Neural Network Example (LeNet-5)
 
 1. **Input:**
 
@@ -95,7 +95,7 @@
 
 ![nn example 2](https://github.com/user-attachments/assets/dcd61d0d-76a4-4653-bbed-a04ead65655a)
 
-#### Why convolution?
+#### 3.1 Why convolution?
 
 1. **Parameter sharing:**
 
