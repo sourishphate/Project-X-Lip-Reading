@@ -68,28 +68,28 @@
 
 ### 3. Convolutional Neural Network Example (LeNet-5)
 
-1. **Input:**
+- **Input:**
 
-- We start with an image that is 32 x 32 pixels and has 3 color channels (RGB).
+    - We start with an image that is 32 x 32 pixels and has 3 color channels (RGB).
 
-2. **Convolutional Layer:**
+    - **Convolutional Layer:**
 
-- We apply a filter of size `5 x 5` to the input image. This filter helps us extract features from the image.
-- We use 6 filters in this layer, so the output becomes `28 x 28 x 6`
+    - We apply a filter of size `5 x 5` to the input image. This filter helps us extract features from the image.
+    - We use 6 filters in this layer, so the output becomes `28 x 28 x 6`
 
-3. **Pooling Layer:**
+- **Pooling Layer:**
 
-- We apply a pooling operation to reduce the size of the output from the previous layer.
-- In this case, we use max pooling with a filter size of `2 x 2` and a stride of 2.
-- This reduces the output size to `14 x 14 x 6`
+    - We apply a pooling operation to reduce the size of the output from the previous layer.
+    - In this case, we use max pooling with a filter size of `2 x 2` and a stride of 2.
+    - This reduces the output size to `14 x 14 x 6`
 
-4. **Repeat:**
+- **Repeat:**
 
-- We can repeat the convolutional and pooling layers to further extract features and reduce the size of the output.
+    - We can repeat the convolutional and pooling layers to further extract features and reduce the size of the output.
 
-5. **Fully Connected Layer:**
+- **Fully Connected Layer:**
 
-- Finally, we connect the output of the previous layers to a fully connected layer, which helps us classify the image into one of the 10 possible digits (0 to 9).
+    - Finally, we connect the output of the previous layers to a fully connected layer, which helps us classify the image into one of the 10 possible digits (0 to 9).
 
 ![neural network example](https://github.com/user-attachments/assets/b1b15f8f-8688-41c6-82e1-a8954ba7f26b)
 
