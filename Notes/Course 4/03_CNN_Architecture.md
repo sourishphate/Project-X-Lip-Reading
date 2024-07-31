@@ -156,13 +156,13 @@ The MobileNet v2 architecture consists of repeating a block `17 times` called th
 
 ![mobile net bottleneck](https://github.com/user-attachments/assets/0a5efe93-87d8-437d-8528-2afedb0cbe18)
 
-### EfficientNet
+### 8. EfficientNet
 
 ![efficient net](https://github.com/user-attachments/assets/09d1c1da-fcf0-428c-b5f5-6e927aee6545)
 
-### Practical advice on using ConvNet
+### 9. Practical advice on using ConvNet
 
-#### Transfer learning
+#### 9.1 Transfer learning
 
 Transfer learning is a technique used in computer vision to make faster progress when building a new computer vision application. Instead of starting from scratch and training a neural network from random initialization, transfer learning allows us to use pre-trained networks that have already been trained on large datasets by other researchers.
 
@@ -172,7 +172,7 @@ Transfer learning is a technique used in computer vision to make faster progress
 
 ![transfer learning](https://github.com/user-attachments/assets/1e6c7a73-05b0-4b64-bb50-e6633c8d02e9)
 
-#### Data augmentation
+#### 9.2 Data augmentation
 
 In computer vision, data augmentation is a technique used to improve the performance of computer vision systems by increasing the amount of training data. Computer vision is the task of analyzing and understanding images, which can be quite complex. To do this, we need to learn a complicated function that can recognize objects or patterns in images.
 
