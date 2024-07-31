@@ -159,3 +159,39 @@ The MobileNet v2 architecture consists of repeating a block `17 times` called th
 ### EfficientNet
 
 ![efficient net](https://github.com/user-attachments/assets/09d1c1da-fcf0-428c-b5f5-6e927aee6545)
+
+### Practical advice on using ConvNet
+
+#### Transfer learning
+
+Transfer learning is a technique used in computer vision to make faster progress when building a new computer vision application. Instead of starting from scratch and training a neural network from random initialization, transfer learning allows us to use pre-trained networks that have already been trained on large datasets by other researchers.
+
+- Transfer learning is a powerful technique because it allows us to leverage the knowledge and insights gained from training on large datasets.
+- It saves us time and computational resources by using pre-trained networks as a starting point for our own specific tasks. 
+- Whether we have a small or large training set, transfer learning can help us achieve better performance in computer vision applications.
+
+![transfer learning](https://github.com/user-attachments/assets/1e6c7a73-05b0-4b64-bb50-e6633c8d02e9)
+
+#### Data augmentation
+
+In computer vision, data augmentation is a technique used to improve the performance of computer vision systems by increasing the amount of training data. Computer vision is the task of analyzing and understanding images, which can be quite complex. To do this, we need to learn a complicated function that can recognize objects or patterns in images.
+
+Data augmentation involves creating new training examples by applying various transformations to the existing images in our dataset.
+
+- **Geometric transformations**
+    - It include techniques like `mirroring` `random cropping` `rotation` and shearing.
+    - These transformations change the `position` `size` or `shape` of the image.
+
+![geometric transformation](https://github.com/user-attachments/assets/13282bfb-c7a2-445d-ac64-509b10899a3c)
+
+- **Color shifting**
+    - It involves changing the colors of the image by adding or subtracting values from the `red` `green` and `blue` channels.
+
+![color shifting](https://github.com/user-attachments/assets/0ae9b17b-6737-4770-a1dd-fc721fbd063a)
+
+By applying these transformations, we can create new variations of the original images, which helps our models learn to recognize objects or patterns from different perspectives. 
+
+*This makes our models more robust and better able to handle variations in real-world images.*
+
+
+
