@@ -82,6 +82,8 @@ IoU > 0.5 -> Acceptable
 ```
 *IoU is measure of the overlap between two bounding boxes*
 
+![intersection over union](https://github.com/user-attachments/assets/d6ede558-5fe0-424a-9537-20c79eaa5061)
+
 ### 6. Non-Max Suppression
 
 Non-max suppression is a technique used in object detection algorithms to ensure that each object is detected only once.
@@ -90,3 +92,25 @@ Non-max suppression is a technique used in object detection algorithms to ensure
 - Then, it compares the remaining detections to the most confident one. If any of the remaining detections have a high overlap with the most confident detection, they are suppressed or discarded.
 - The algorithm repeats this process, selecting the next most confident detection and suppressing any overlapping detections, until all detections have been processed. 
 - The final result is a set of non-overlapping detections, with each object represented by a single detection.
+
+![non max supression](https://github.com/user-attachments/assets/99a6f492-8c36-454d-be46-dfa9727c67bb)
+
+### 7. Anchor Box Algorithm
+
+If you want to detect different objects in it, like cars, pedestrians, and motorcycles. The problem is that sometimes these objects can overlap or be very close to each other, making it hard for the computer to tell them apart.
+
+To solve this, we use something called anchor boxes. Anchor boxes are pre-defined shapes that represent different types of objects.
+
+- When the computer analyzes the image, it assigns each object to the grid cell that contains its center point. 
+- But instead of just detecting one object per cell, it now associates each object with the anchor box that best matches its shape.
+- This way, the computer can output multiple detections for each grid cell, allowing it to detect and classify different objects accurately.
+
+![Anchor box](https://github.com/user-attachments/assets/a15069e2-ba8d-4c09-98b9-a051561cb535)
+
+### 8. YOLO Algorithm
+
+![yolo2](https://github.com/user-attachments/assets/256922d3-0b8b-4940-b528-5ccd2d427d60)
+
+#### 8.1 Outputing non max supression
+
+![outputin max sup](https://github.com/user-attachments/assets/b922ad83-f4f8-4153-b0d4-4e2b7146e2f4)
