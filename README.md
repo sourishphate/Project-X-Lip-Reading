@@ -18,12 +18,13 @@
 ## 📑 Table of Contents
 
 - [About the Project](#-about-the-project)
-- [Tech Stack](#-tech-stack)
+- [Tech Stack](#️-tech-stack)
 - [File Structure](#-file-structure)
 
 ## 📘 About the Project
 
-## 🧩 Tech Stack
+
+## ⚙️ Tech Stack
 
 | **Category**                | **Technologies**                                                                                       |
 |-----------------------------|----------------------------------------------------------------------------------------------------|
@@ -36,7 +37,47 @@
 | **Visualization & Analysis**| [![Matplotlib](https://img.shields.io/badge/matplotlib-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://matplotlib.org/) [![Seaborn](https://img.shields.io/badge/seaborn-013243?style=for-the-badge&logo=python&logoColor=white)](https://seaborn.pydata.org/)                 |
 
 
-
 ## 📁 File Structure
+
+    ├── Dataset Preprocessing
+       ├── xml files
+          ├── haarcascade_frontalface_default.xml
+          ├── haarcascade_mcs_mouth.xml
+          ├── shape_predictor_68_face_landmarks.dat
+       ├── 01_Face_Extraction.ipynb
+       ├── 02_Lip_Extraction.ipynb
+       ├── 03_Train_Test_Split.ipynb
+    ├── Hyperparameter Tuning
+       ├── Grid Search.ipynb
+       ├── Random Search.ipynb
+    ├── Mini Projects
+       ├── Cat_Dog_Classifier_CNN.ipynb
+       ├── Human_Action_Recognition_LSTM.ipynb
+       ├── Next_Word_Predictor_LSTM.ipynb
+       ├── Video_Anomaly_Detection_CNN_LSTM.ipynb
+    ├── Model Architecture
+       ├── Saved Model
+          ├── 3D_CNN_Bi-LSTM.h5
+       ├── 3D_CNN.ipynb
+       ├── 3D_CNN_Bi-LSTM.ipynb
+       ├── 3D_CNN_From_Scratch.ipynb
+       ├── 3D_CNN_LSTM.ipynb
+       ├── Adam.ipynb
+       ├── CategoricalCrossentropy.ipynb
+       ├── Data_Augmentation.ipynb
+       ├── Dropout.ipynb
+       ├── EarlyStopping.ipynb
+       ├── L1_Regularization.ipynb
+       ├── L2_Regularization_1.ipynb
+       ├── L2_Regularization_2.ipynb
+       ├── RMSprop.ipynb
+    ├── Model Evaluation
+       ├── Accuracy.ipynb
+       ├── Live_Detection.ipynb
+       ├── Onlne_Testing.ipynb
+       ├── Precision.ipynb
+       ├── Recall.ipynb
+    ├── README.md
+
 
 
