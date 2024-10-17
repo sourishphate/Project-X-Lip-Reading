@@ -1,146 +1,165 @@
-import numpy as np
 import os
+import sys
+import numpy as np
 import imutils
 import dlib
 import cv2
 import matplotlib.pyplot as plt
-import skimage
 from skimage.transform import resize
-import imageio
 from imutils import face_utils
+import tensorflow as tf
 
 words = ['NULL', 'Begin', 'Choose', 'Connection', 'Navigation', 'Next', 'Previous', 'Start', 'Stop', 'Hello', 'Web']
 
 def face_extractor(img):
-    image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    try:
+        image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        face_classifier = cv2.CascadeClassifier('Dataset Preprocessing/xml files/haarcascade_frontalface_default.xml')
+        faces = face_classifier.detectMultiScale(image, 1.3, 5)
 
-    face_classifier = cv2.CascadeClassifier('xml files\\haarcascade_frontalface_default.xml')
-    faces = face_classifier.detectMultiScale(image, 1.3, 5)
-
-    # If faces are found, extract the first face
-    if len(faces) > 0:
-        for (x, y, w, h) in faces:
+        if len(faces) > 0:
+            (x, y, w, h) = faces[0]
             cropped_image = image[y:y+h, x:x+w]
             cropped_image = cv2.cvtColor(cropped_image, cv2.COLOR_RGB2BGR)
             return cropped_image
-    else:
-        print("No face found.")
+        else:
+            print("No face found.")
+            return None
+    except Exception as e:
+        print(f"Error in face_extractor: {e}")
         return None
-    
+
 def lips_extractor(img):
-    predictor = dlib.shape_predictor('xml files\shape_predictor_68_face_landmarks.dat')
+    try:
+        predictor = dlib.shape_predictor('Dataset Preprocessing/xml files/shape_predictor_68_face_landmarks.dat')
+        image = imutils.resize(img, width=56)
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-    image = imutils.resize(img, width=56)
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        bbox = dlib.rectangle(0, 0, gray.shape[1], gray.shape[0])
+        face_landmarks = predictor(gray, bbox)
+        face_landmarks = face_utils.shape_to_np(face_landmarks)
 
-    bbox = dlib.rectangle(0, 0, gray.shape[1], gray.shape[0])
-    face_landmarks = predictor(gray, bbox)
-    face_landmarks = face_utils.shape_to_np(face_landmarks)
-
-    for (name,(i,j)) in face_utils.FACIAL_LANDMARKS_IDXS.items():
-         if name=='mouth':
-            for (x, y) in face_landmarks[i:j]:
+        lip_image = None
+        for (name, (i, j)) in face_utils.FACIAL_LANDMARKS_IDXS.items():
+            if name == 'mouth':
                 (x, y, w, h) = cv2.boundingRect(np.array([face_landmarks[i:j]]))
                 lip_image = image[y - 2:y + h + 2, x - 2:x + w + 2]
                 lip_image = imutils.resize(lip_image, width=500, inter=cv2.INTER_CUBIC)
-
                 lip_image = cv2.cvtColor(lip_image, cv2.COLOR_BGR2GRAY)
+                break
 
-    if len(lip_image) == 0:
-        print("No lips detected.")
+        if lip_image is None or lip_image.size == 0:
+            print("No lips detected.")
+            return None
+        else:
+            return lip_image
+    except Exception as e:
+        print(f"Error in lips_extractor: {e}")
         return None
-    else:
-        return lip_image
-    
+
 cap = cv2.VideoCapture(0)
+if not cap.isOpened():
+    print("Error: Could not open video device")
+    sys.exit()
+
 frames = []
 recording = False
+
+print("Press Space to start/stop recording, and Esc to exit.")
 
 while True:
     ret, frame = cap.read()
     if not ret:
+        print("Failed to grab frame.")
         break
 
-    key = cv2.waitKey(1)
-    if key == 27:  # Escape key to exit
+    cv2.imshow("Video Feed", frame)
+
+    key = cv2.waitKey(1) & 0xFF
+    if key == 27:  
         break
-    elif key == 32:  # Spacebar to start/stop recording
+    elif key == 32:  
         recording = not recording
+        if recording:
+            print("Recording started.")
+            frames = [] 
+        else:
+            print("Recording stopped.")
 
     if recording:
-        frames.append(frame)
-        cv2.putText(frame, "Recording...", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 255), 2)
-    else:
-        cv2.putText(frame, "Press Space to Record", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
-
-    cv2.imshow("Video", frame)
+        frames.append(frame.copy())
 
 cap.release()
 cv2.destroyAllWindows()
 
 print(f"Recorded {len(frames)} frames.")
 
+# min and max frames
 min_frames = 8
 max_frames = 28
 total_frames = len(frames)
 
-# Calculate the number of frames to extract
-num_frames = min(max_frames, max(min_frames, total_frames // 10))
+if total_frames == 0:
+    print("No frames recorded. Exiting.")
+    sys.exit()
 
-# Calculate the interval between frames
-interval = total_frames // num_frames
+num_frames = min(max_frames, max(min_frames, total_frames // 10))
+interval = max(1, total_frames // num_frames)
 
 sequence = []
 for i in range(num_frames):
-    frame = frames[i * interval]
-    frame = face_extractor(frame)
-    frame = lips_extractor(frame)
-    frame = resize(frame, (100,100))
-    frame = 255 * frame
-    frame = frame.astype(np.uint8)
-    sequence.append(frame)
+    idx = i * interval
+    if idx >= total_frames:
+        idx = total_frames - 1
+    frame = frames[idx]
+    face = face_extractor(frame)
+    if face is None:
+        print(f"No face found in frame {idx}. Skipping frame.")
+        continue
+    lips = lips_extractor(face)
+    if lips is None:
+        print(f"No lips found in frame {idx}. Skipping frame.")
+        continue
+    resized_frame = resize(lips, (100, 100))
+    resized_frame = (255 * resized_frame).astype(np.uint8)
+    sequence.append(resized_frame)
 
 print(f"Extracted {len(sequence)} frames.")
 
-pad_array = [np.zeros((100, 100))]
-sequence.extend(pad_array * (28 - len(sequence)))
+if len(sequence) == 0:
+    print("No valid frames extracted. Exiting.")
+    sys.exit()
+
+# sequence padding
+pad_length = 28 - len(sequence)
+if pad_length > 0:
+    pad_array = [np.zeros((100, 100), dtype=np.uint8)] * pad_length
+    sequence.extend(pad_array)
 sequence = np.array(sequence)
 
 
-def display_images(image_list):
-    fig, axes = plt.subplots(2, 14, figsize=(14, 2))
-    for i, img in enumerate(image_list):
-        row, col = divmod(i, 14)
-        axes[row, col].imshow(img)
-        axes[row, col].axis('off')  # Hide axes
-    plt.show()
+model_path = '/home/veeransh/Desktop/Project-X-Lip-Reading/Model Architecture/Saved Model/3D_CNN_Bi-LSTM.h5' # load model (change to your cnn+lstm or 3d cnn scratch (.h5 file))
+try:
+    loaded_model = tf.keras.models.load_model(model_path)
+except Exception as e:
+    print(f"Error loading model: {e}")
+    sys.exit()
 
-display_images(sequence)
+# Normalizing
+sequence = sequence.astype('float32') / 255.0  
+sequence = sequence.reshape(1, 28, 100, 100, 1)  
 
-# import tensorflow as tf
-# # Load the model
-# loaded_model = tf.keras.models.load_model('D:\Lip Reading\Data Preprocessing\\3D_CNN_LSTM_words.h5')
 
-# # Normalize the sequence
-# np.seterr(divide='ignore', invalid='ignore')  # Ignore divide by 0 warning
-# v_min = sequence.min(axis=(1, 2), keepdims=True)
-# v_max = sequence.max(axis=(1, 2), keepdims=True)
-# sequence = (sequence - v_min) / (v_max - v_min)
-# sequence = np.nan_to_num(sequence)
-
-# # Reshape the input for prediction
-# my_pred = sequence.reshape(1, 28, 100, 100, 1)
-# ans = loaded_model.predict(my_pred)
-
-# # Get all words with their percentages
-# percentages = [round(p * 100, 2) for p in ans[0]]
-# predictions = {words[i]: percentages[i] for i in range(len(words))}
-
-# # Print all words with their percentages
-# for word, percent in predictions.items():
-#     print(f"Predicted: {word} , {percent} %")
-
-# max_index = np.argmax(ans)
-# text = f"Predicted: {words[max_index]} , {percentages[max_index]} %"
-
-# print(text)
+try:
+    ans = loaded_model.predict(sequence)
+    percentages = [round(p * 100, 2) for p in ans[0]]
+    predictions = {words[i]: percentages[i] for i in range(len(words))}
+    
+    for word, percent in predictions.items():
+        print(f"{word}: {percent}%")
+    
+    max_index = np.argmax(ans)
+    text = f"Predicted: {words[max_index]} with confidence {percentages[max_index]}%"
+    print(text)
+except Exception as e:
+    print(f"Error during prediction: {e}")
