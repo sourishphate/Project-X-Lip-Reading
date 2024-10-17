@@ -71,7 +71,7 @@ while True:
         frames.append(frame)
         cv2.putText(frame, "Recording...", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 255), 2)
     else:
-        cv2.putText(frame, "Press Space to Record", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255, 255, 255), 2)
+        cv2.putText(frame, "Press Space to Record", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
 
     cv2.imshow("Video", frame)
 
