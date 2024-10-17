@@ -109,7 +109,7 @@ sequence = np.array(sequence)
 
 import tensorflow as tf
 # Load the model
-loaded_model = tf.keras.models.load_model('D:\Project-X-Lip-Reading\Model Architecture\Saved Model\\3D_CNN_LSTM_words_2_10.h5')
+loaded_model = tf.keras.models.load_model('D:\Project-X-Lip-Reading\Model Architecture\Saved Model\3D_CNN_LSTM_words_2_10.h5')
 
 # Normalize the sequence
 np.seterr(divide='ignore', invalid='ignore')  # Ignore divide by 0 warning
