@@ -28,7 +28,7 @@
 
 ### Accuracy
 
-<img src="https://github.com/user-attachments/assets/084ae834-7398-48e2-b3db-6bd9f5e279cb" alt="read-my-lips" width="350" />
+<img src="https://github.com/user-attachments/assets/084ae834-7398-48e2-b3db-6bd9f5e279cb" alt="read-my-lips" width="200" />
 
 ### Online Testing
 
@@ -49,9 +49,16 @@
 - [About the Project](#-about-the-project)
 - [Tech Stack](#️-tech-stack)
 - [File Structure](#-file-structure)
+- [Dataset](#-dataset-miracl-vc1)
+- [Model Architecture](#-model-architecture)
+- [Installation and Setup](#-installation-and-setup)
+- [Future Scope](#-future-scope)
+- [Acknowledgements](#-acknowledgement)
+- [Contributors](#-contributors)
 
 ## 📘 About the Project
 
+This project focuses on developing a sophisticated lip-reading system that interprets spoken words from sequences of images. Using Haar Cascade classifiers for face extraction and dlib’s facial landmark detection for lip extraction, we effectively preprocess the data. A train-test split ensures robust model evaluation. The core of the project is a hybrid model combining 3D CNNs, which capture spatial features, and LSTMs, which understand temporal dynamics. Extensive hyperparameter tuning enhances the model’s accuracy. The system has been tested on online videos for accuracy and reliability and includes a live detection feature to showcase real-time capabilities.
 
 ## ⚙️ Tech Stack
 
@@ -129,5 +136,41 @@ The **MIRACL-VC1** dataset is structured to facilitate research in visual speech
 
 [Download the MIRACL-VC1 dataset on Kaggle](https://www.kaggle.com/datasets/apoorvwatsky/miraclvc1)
 
-## 💾 Model Architecture:
+
+## 🤖 Model Architecture
+
+![276662464-b1a8a17b-da29-4424-9e5c-b3f51dd07a27](https://github.com/user-attachments/assets/08cbf766-8553-43ac-a3b7-5c987bce50b8)
+
+1. **3D Convolutional Neural Network (3D CNN)**:
+   Several convolutional layers are used, each followed by activation functions and pooling layers to reduce dimensionality while preserving essential features.
+
+2. **Reshape Layer**:
+   The tensor dimensions are adjusted to flatten the spatial data into a format that the LSTM can process.
+
+3. **Long Short-Term Memory (LSTM)**:
+   One or more LSTM layers are employed to process the sequential data, enabling the model to retain information over time and improve prediction accuracy.
+
+4. **Flatten Layer**:
+   This flattens the data without altering its values, preparing it for the next stage.
+
+5. **Dropout Layer**:
+    A dropout rate is set (e.g., 0.5) to control the fraction of neurons dropped this prevents overfitting.
+
+6. **Dense Layers**:
+    One or more dense layers with activation functions (e.g., softmax for multi-class classification) are used to output the prediction probabilities.
+   
+
+By combining these components, the model effectively learns to interpret lip movements, translating them into accurate predictions of spoken words.
+
+## 🛠️ Installation and Setup
+
+## 🌟 Future Scope
+
+## 📜 Acknowledgement
+
+## 👥 Contributors
+
+
+
+
 
