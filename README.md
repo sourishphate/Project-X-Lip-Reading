@@ -195,6 +195,14 @@ If you encounter issues or want to suggest any improvements [raise an issue](htt
 
 ## 🌟 Future Scope
 
+- **Multilingual Model**: Extend the current lip-reading model to support multiple languages, making it adaptable for a global audience and capable of handling diverse linguistic inputs.
+
+- **User Interface Development**: Design a user-friendly interface that allows real-time interaction with the lip-reading model, improving accessibility and practical usability.
+
+- **Sentence-Level Lip Reading**: Upgrade the model to read and interpret entire sentences, moving beyond word-level predictions to understand more complex speech patterns.
+
+- **Large-Scale Model with Bigger Datasets**: Transition to a large-scale model by training with much larger datasets, which will boost the model’s ability to generalize across various lip movements, leading to greater accuracy.
+
 ## 📜 Acknowledgement
 
 We would like to express our gratitude to all the tools and courses which helped in successful completion of this project.
