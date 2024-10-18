@@ -96,7 +96,9 @@ The **MIRACL-VC1** dataset is structured to facilitate research in visual speech
 
 #### Dataset Contains The Following Words and Phrases:
 
-![image](https://github.com/user-attachments/assets/cc4d4ba3-0961-4439-8a36-0a0de73e2bac)
+![image](https://github.com/user-attachments/assets/89a99eee-09b5-4a17-9f25-8e413ecb8ebf)
 
 [Download the MIRACL-VC1 dataset on Kaggle](https://www.kaggle.com/datasets/apoorvwatsky/miraclvc1)
+
+## 💾 Model Architecture:
 
