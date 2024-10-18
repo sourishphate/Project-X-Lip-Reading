@@ -168,7 +168,7 @@ Follow these steps to set up the project environment and install necessary depen
 
 ### Prerequisites
 Ensure you have the following software installed:
-- [Python 3.x](https://www.python.org/downloads/)
+- [Python](https://www.python.org/downloads/)
 - [pip](https://pip.pypa.io/en/stable/installation/)
 - [Git](https://git-scm.com/)
 
@@ -190,7 +190,7 @@ Start the live detection application using the following command:
 python '.\Model Evaluation\Live_detection.py
 ```
 ### Troubleshooting
-If you encounter issues raise an issue on GitHub.
+If you encounter issues [raise an issue](https://github.com/sourishphate/Project-X-Lip-Reading/issues)on GitHub.
 
 
 ## 🌟 Future Scope
