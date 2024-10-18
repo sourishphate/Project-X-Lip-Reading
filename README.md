@@ -84,3 +84,19 @@
        ├── Sourish Phate       
     ├── README.md
 
+## 💾 Dataset: MIRACL-VC1
+
+The **MIRACL-VC1** dataset is structured to facilitate research in visual speech recognition, particularly lip reading. Here's a breakdown of its structure and contents:
+
+#### Data Composition:
+- **Video Clips**: The dataset contains short video clips of multiple speakers reciting specific phrases. Each clip captures the upper body, focusing mainly on the face and mouth area.
+- **Speakers**: It features several speakers from diverse backgrounds, which helps models generalize across different individuals and speaking styles.
+- **Languages**: The dataset is typically in English, though speakers may vary in accents and pronunciations.
+- **Phrases**: Each video clip corresponds to one of a predefined set of phrases, which are recited by the speakers. The phrases are usually short and may cover simple daily expressions or numbers.
+
+#### Dataset Contains The Following Words and Phrases:
+
+![image](https://github.com/user-attachments/assets/cc4d4ba3-0961-4439-8a36-0a0de73e2bac)
+
+[Download the MIRACL-VC1 dataset on Kaggle](https://www.kaggle.com/datasets/apoorvwatsky/miraclvc1)
+
