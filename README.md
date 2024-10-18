@@ -28,7 +28,7 @@
 
 ### Accuracy
 
-<img src="https://github.com/user-attachments/assets/084ae834-7398-48e2-b3db-6bd9f5e279cb" alt="read-my-lips" width="200" />
+<img src="https://github.com/user-attachments/assets/084ae834-7398-48e2-b3db-6bd9f5e279cb" alt="read-my-lips" width="250" />
 
 ### Online Testing
 
@@ -164,11 +164,42 @@ By combining these components, the model effectively learns to interpret lip mov
 
 ## 🛠️ Installation and Setup
 
+Follow these steps to set up the project environment and install necessary dependencies.
+
+### Prerequisites
+Ensure you have the following software installed:
+- [Python 3.x](https://www.python.org/downloads/)
+- [pip](https://pip.pypa.io/en/stable/installation/)
+- [Git](https://git-scm.com/)
+
+### Clone the Repository
+Clone the project repository from GitHub:
+```
+git clone https://github.com/sourishphate/Project-X-Lip-Reading.git
+cd Project-X-Lip-Reading
+```
+
+### Install Dependencies
+Install the required Python packages:
+```
+pip install -r requirements.txt
+```
+### Run the Application
+Start the live detection application using the following command:
+```
+python '.\Model Evaluation\Live_detection.py
+```
+### Troubleshooting
+If you encounter issues raise an issue on GitHub.
+
+
 ## 🌟 Future Scope
 
 ## 📜 Acknowledgement
 
 ## 👥 Contributors
+
+
 
 
 
