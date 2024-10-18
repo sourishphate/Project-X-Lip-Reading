@@ -190,7 +190,7 @@ Start the live detection application using the following command:
 python '.\Model Evaluation\Live_detection.py
 ```
 ### Troubleshooting
-If you encounter issues [raise an issue](https://github.com/sourishphate/Project-X-Lip-Reading/issues)on GitHub.
+If you encounter issues [raise an issue](https://github.com/sourishphate/Project-X-Lip-Reading/issues) on GitHub.
 
 
 ## 🌟 Future Scope
