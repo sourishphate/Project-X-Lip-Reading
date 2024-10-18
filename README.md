@@ -14,6 +14,35 @@
 
 ## 📊 Results
 
+### Confusion Matrix
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/713915fc-8c9d-4066-a285-da73781f3a52" alt="Image 1" width="200"></td>
+    <td><img src="https://github.com/user-attachments/assets/1588f2ef-b0d3-4989-9e7a-5011e588de35" alt="Image 2" width="200"></td>
+  </tr>
+  <tr>
+    <td align="center">For Words</td>
+    <td align="center">For Phrases</td>
+  </tr>
+</table>
+
+### Accuracy
+
+<img src="https://github.com/user-attachments/assets/084ae834-7398-48e2-b3db-6bd9f5e279cb" alt="read-my-lips" width="350" />
+
+### Online Testing
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/0d2bb28d-5bf6-43d6-a3b6-2990621c493b" alt="choose_american" width="200"></td>
+    <td><img src="https://github.com/user-attachments/assets/fc72d19f-ca21-428b-8d49-1d1402e7e63b" alt="arrow" width="50">
+    <td><img src="https://github.com/user-attachments/assets/8249aa7f-336f-4b94-9324-65609dfff06d" alt="second_image" width="200"></td>
+  </tr>
+</table>
+
+### Live Detection
+
+
 
 ## 📑 Table of Contents
 
