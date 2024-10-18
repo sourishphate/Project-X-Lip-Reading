@@ -77,5 +77,10 @@
        ├── Onlne_Testing.ipynb
        ├── Precision.ipynb
        ├── Recall.ipynb
+    ├── Notes
+       ├── LSTM
+       ├── OpenCV
+       ├── Om Mukherjee
+       ├── Sourish Phate       
     ├── README.md
 
