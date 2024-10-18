@@ -12,6 +12,23 @@
 
 <br />
 
+## 📑 Table of Contents
+
+- [About the Project](#-about-the-project)
+- [Results](#-results)
+- [Tech Stack](#️-tech-stack)
+- [File Structure](#-file-structure)
+- [Dataset](#-dataset-miracl-vc1)
+- [Model Architecture](#-model-architecture)
+- [Installation and Setup](#-installation-and-setup)
+- [Future Scope](#-future-scope)
+- [Acknowledgements](#-acknowledgement)
+- [Contributors](#-contributors)
+
+## 📘 About the Project
+
+This project focuses on developing a sophisticated lip-reading system that interprets spoken words from sequences of images. Using Haar Cascade classifiers for face extraction and dlib’s facial landmark detection for lip extraction, we effectively preprocess the data. A train-test split ensures robust model evaluation. The core of the project is a hybrid model combining 3D CNNs, which capture spatial features, and LSTMs, which understand temporal dynamics. Extensive hyperparameter tuning enhances the model’s accuracy. The system has been tested on online videos for accuracy and reliability and includes a live detection feature to showcase real-time capabilities.
+
 ## 📊 Results
 
 ### Confusion Matrix
@@ -34,31 +51,17 @@
 
 <table>
   <tr>
+    <td><img src="https://github.com/user-attachments/assets/c543b5a3-0eff-45a2-aba2-78fa44d6427f" alt="choose_american" width="200"></td>
+    <td><img src="https://github.com/user-attachments/assets/fc72d19f-ca21-428b-8d49-1d1402e7e63b" alt="arrow" width="50">
+    <td><img src="https://github.com/user-attachments/assets/0393c0f0-9890-48a4-a308-d6d85eca9cdd" alt="second_image" width="200"></td>
+  </tr>
+  <tr>
     <td><img src="https://github.com/user-attachments/assets/0d2bb28d-5bf6-43d6-a3b6-2990621c493b" alt="choose_american" width="200"></td>
     <td><img src="https://github.com/user-attachments/assets/fc72d19f-ca21-428b-8d49-1d1402e7e63b" alt="arrow" width="50">
     <td><img src="https://github.com/user-attachments/assets/8249aa7f-336f-4b94-9324-65609dfff06d" alt="second_image" width="200"></td>
   </tr>
 </table>
 
-### Live Detection
-
-
-
-## 📑 Table of Contents
-
-- [About the Project](#-about-the-project)
-- [Tech Stack](#️-tech-stack)
-- [File Structure](#-file-structure)
-- [Dataset](#-dataset-miracl-vc1)
-- [Model Architecture](#-model-architecture)
-- [Installation and Setup](#-installation-and-setup)
-- [Future Scope](#-future-scope)
-- [Acknowledgements](#-acknowledgement)
-- [Contributors](#-contributors)
-
-## 📘 About the Project
-
-This project focuses on developing a sophisticated lip-reading system that interprets spoken words from sequences of images. Using Haar Cascade classifiers for face extraction and dlib’s facial landmark detection for lip extraction, we effectively preprocess the data. A train-test split ensures robust model evaluation. The core of the project is a hybrid model combining 3D CNNs, which capture spatial features, and LSTMs, which understand temporal dynamics. Extensive hyperparameter tuning enhances the model’s accuracy. The system has been tested on online videos for accuracy and reliability and includes a live detection feature to showcase real-time capabilities.
 
 ## ⚙️ Tech Stack
 
