@@ -197,8 +197,23 @@ If you encounter issues raise an issue on GitHub.
 
 ## 📜 Acknowledgement
 
+We would like to express our gratitude to all the tools and courses which helped in successful completion of this project.
+
+**Research Papers**
+- [https://cs229.stanford.edu/proj2019aut/data/assignment_308832_raw/26646023.pdf](https://cs229.stanford.edu/proj2019aut/data/assignment_308832_raw/26646023.pdf)
+- [https://colah.github.io/posts/2015-08-Understanding-LSTMs/](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+- [https://towardsdatascience.com/automated-lip-reading-simplified-c01789469dd8](https://towardsdatascience.com/automated-lip-reading-simplified-c01789469dd8)
+
+**Courses**
+- [Andrew Ng's Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning)
+- [OpenCV Free Bootcamp](https://opencv.org/university/free-opencv-course/)
+
+A special thanks to our project mentor [Veeransh Shah](https://github.com/Veeransh14) and to the entire [Project X](https://github.com/ProjectX-VJTI) community for unwavering support and guidance throughout this journey.
+
 ## 👥 Contributors
 
+- [Sourish Phate](https://github.com/sourishphate)
+- [Om Mukherjee](https://github.com/meekhumor)
 
 
 
